@@ -6,10 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 16:23:58 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/19 16:24:06 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:54:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+
 int main(void){
-	
+	std::cout << "welcome" << std::endl;
 }
