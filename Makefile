@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/06/20 10:19:12 by chhoflac          #+#    #+#              #
+#    Updated: 2025/06/20 10:19:29 by chhoflac         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 .SUFFIXES:
 
 # Compiler settings
@@ -37,35 +49,40 @@ COMMON := $(GENERAL_OBJS)
 # Default target
 all: default
 
-default: $(NAME)
+default:
+	@bash shellScripts/banner.sh "DEFAULT"
+	$(MAKE) $(DEFAULT_OBJS)
+	$(CXX) $(CXXFLAGS) $(DEFAULT_OBJS) -o $(NAME)
 
-$(NAME): $(DEFAULT_OBJS)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+csv:
+	@bash shellScripts/banner.sh "CSV"
+	$(MAKE) $(CSV_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(CSV_OBJS) $(COMMON) -o $(NAME)_csv
 
-$(NAME)_csv: $(CSV_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+txt:
+	@bash shellScripts/banner.sh "TXT"
+	$(MAKE) $(TXT_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(TXT_OBJS) $(COMMON) -o $(NAME)_txt
 
-$(NAME)_txt: $(TXT_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+cpp09:
+	@bash shellScripts/banner.sh "CPP09_EX00"
+	$(MAKE) $(CPP09_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(CPP09_OBJS) $(COMMON) -o $(NAME)_cpp09
 
-$(NAME)_cpp09: $(CPP09_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+cub3d:
+	@bash shellScripts/banner.sh "CUB3D"
+	$(MAKE) $(CUB3D_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(CUB3D_OBJS) $(COMMON) -o $(NAME)_cub3d
 
-$(NAME)_cub3d: $(CUB3D_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+gnl:
+	@bash shellScripts/banner.sh "GNL"
+	$(MAKE) $(GNL_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(GNL_OBJS) $(COMMON) -o $(NAME)_gnl
 
-$(NAME)_gnl: $(GNL_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-
-$(NAME)_solong: $(SOLONG_OBJS) $(COMMON)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-
-csv: $(NAME)_csv
-txt: $(NAME)_txt
-cpp09: $(NAME)_cpp09
-cub3d: $(NAME)_cub3d
-gnl: $(NAME)_gnl
-solong: $(NAME)_solong
+solong:
+	@bash shellScripts/banner.sh "SOLONG"
+	$(MAKE) $(SOLONG_OBJS) $(COMMON)
+	$(CXX) $(CXXFLAGS) $(SOLONG_OBJS) $(COMMON) -o $(NAME)_solong
 
 # Generic rule for .cpp → build/xxx.o
 $(BUILD_DIR)/%.o: %.cpp
