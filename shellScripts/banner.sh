@@ -6,16 +6,15 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 09:57:34 by chhoflac          #+#    #+#              #
-#    Updated: 2025/06/20 11:41:57 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/06/20 12:20:18 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#!/bin/bash
 
 mode=$(echo "$1" | tr a-z A-Z)
 cols=$(tput cols 2>/dev/null || echo 80)
 
-# ASCII art pour TXT
+
 ascii_txt=(
 	"_______________  ______________"
 	"\__    ___/\   \/  /\__    ___/"
@@ -69,7 +68,6 @@ ascii_solong=(
 	"        \/         \/          \/       \/         \/        \/ "
 )
 
-# ASCII par défaut (si tu veux en ajouter d'autres plus tard)
 ascii_default=(
 	"=====default mode====="
 )
