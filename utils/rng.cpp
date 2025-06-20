@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Header.hpp                                         :+:      :+:    :+:   */
+/*   rng.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/20 12:53:33 by chhoflac         ###   ########.fr       */
+/*   Created: 2025/06/20 12:52:30 by chhoflac          #+#    #+#             */
+/*   Updated: 2025/06/20 13:06:11 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
-#include <string>
-#include "general_files/includes/Commons/Date.hpp"
-#include "general_files/includes/Commons/File.hpp"
-#include "general_files/includes/Commons/InterfaceUser.hpp"
-#include "general_files/includes/Commons/Program.hpp"
-#include "general_files/includes/Interfaces/ILine.hpp"
+#include "../Header.hpp"
 
-
-
-
-
+int randomDayGenerator(bool valid){
+	
+}
