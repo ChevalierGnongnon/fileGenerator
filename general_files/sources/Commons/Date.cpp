@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:02:18 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/21 16:14:19 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/06/21 16:33:51 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,7 @@ bool                Date::getIsLeap() const{
 }
 
 std::string         Date::transformToDateString() const{
-
-}
-
-void                Date::dateGenerator(bool isValid){
-
+	
 }
 
 bool                Date::validDefiner() const{
