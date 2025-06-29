@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:02:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/20 12:38:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/06/23 09:40:05 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ class Date{
         bool                getIsValid() const;
         bool                getIsLeap() const;
 
-        std::string         transformToDateString() const; //parse values into std string
+        std::string         transformToDateString(); //parse values into std string
 
-        void                dateGenerator(bool isValid); //creates a random date
-        
-        bool                validDefiner() const; //define wether the date is valid or not
+        bool                validDefiner(); //define wether the date is valid or not
         bool                isLeap();
 };
 

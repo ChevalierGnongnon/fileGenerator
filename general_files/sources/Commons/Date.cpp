@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:02:18 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/21 16:33:51 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/06/25 15:27:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,33 @@ bool                Date::getIsLeap() const{
 	return (this->isLeapYear);
 }
 
-std::string         Date::transformToDateString() const{
+std::string         Date::transformToDateString(){
 	
 }
 
-bool                Date::validDefiner() const{
+bool Date::validDefiner() {
+	int maxDay = 31;
+	if (this->month < 1 || this->month > 12)
+		return false;
+	if (this->day < 1)
+		return false;
+	if (this->year > 2025)
+		return false;
+	if (this->month == 2) {
+		if (this->isLeapYear)
+			maxDay = 29;
+		else
+			maxDay = 28;
+	}
+	else if (this->month == 4 || this->month == 6 || this->month == 9 || this->month == 11)
+		maxDay = 30;
 
+	if (this->day > maxDay)
+		return false;
+	return true;
 }
-bool                Date::isLeap(){
-	
+
+
+bool Date::isLeap(){
+	return ((this->year % 4 == 0 && this->year % 100 != 0)|| (this->year % 400 == 0));
 }
