@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:02:18 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/25 15:27:55 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/06/29 13:31:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,13 @@ bool                Date::getIsLeap() const{
 }
 
 std::string         Date::transformToDateString(){
+	std::ostringstream oss;
 	
+	oss << std::setfill('0')
+	    << std::setw(4) << this->year << "-"
+	    << std::setw(2) << this->month << "-"
+	    << std::setw(2) << this->day;
+	return (oss.str());
 }
 
 bool Date::validDefiner() {
