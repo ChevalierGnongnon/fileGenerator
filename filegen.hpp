@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/01 12:54:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/02 08:56:51 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 #include "general_files/includes/Commons/InterfaceUser.hpp"
 #include "general_files/includes/Commons/Program.hpp"
 #include "general_files/includes/Interfaces/ILine.hpp"
-#include "utils/rng.cpp"
-#include "utils/loading.cpp"
+#include "general_files/sources/utils/loading.cpp"
+#include "general_files/sources/utils/rng.cpp"
 
 
 //RNG

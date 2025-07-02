@@ -6,11 +6,11 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:02:18 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/06/29 13:31:59 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/02 09:08:52 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../Header.hpp"
+#include <filegen.hpp>
 
 Date::Date()
 	: dateString("2000-01-01"),
