@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Header.hpp                                         :+:      :+:    :+:   */
+/*   filegen.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/02 08:56:51 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/02 10:35:56 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 #include <string>
 #include <unistd.h>
 #include <iomanip>
+#include <map>
 #include "general_files/includes/Commons/Date.hpp"
-#include "general_files/includes/Commons/File.hpp"
+#include "general_files/includes/Abstracts/AFile.hpp"
 #include "general_files/includes/Commons/InterfaceUser.hpp"
 #include "general_files/includes/Commons/Program.hpp"
 #include "general_files/includes/Interfaces/ILine.hpp"
