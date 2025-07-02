@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/02 13:00:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:44:15 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 template <typename T>
 class AFile{
 	private :
-		std::map <int, ILine *>	content;
-		const std::string		name;
-		const std::string		extension;
-		int						totalLines;
-		int						goodLines;
-		int						badLines;
-		int						predifinedLines;
-		AFile();
+		std::map <int, ILine *>			content;
+		const std::string				name;
+		const std::string				extension;
+		int								totalLines;
+		int								goodLines;
+		int								badLines;
+		int								predefinedLines;
+			AFile();
 	public :
 		AFile(const std::string name, const std::string extension);
 		AFile(const std::string name, const std::string extension, int nbLines);
@@ -32,22 +32,22 @@ class AFile{
 		
 		AFile &operator=(const AFile &src);
 		
-		std::map <int, ILine *> getContent() const;
-		const std::string		getName() const;
-		const std::string		getExtension() const;
-		int						getTotalLines() const;
-		int						getGoodLines() const;
-		int						getBadLines() const;
-		int						getPredefinedLines() const;
+		const std::map <int, ILine *>	&getContent() const;
+		const std::string				&getName() const;
+		const std::string				&getExtension() const;
+		int								getTotalLines() const;
+		int								getGoodLines() const;
+		int								getBadLines() const;
+		int								getPredefinedLines() const;
 	
-		void					setTotalLines(int n);
-		void					setGoodLines(int n);
-		void					setBadLines(int n);
-		void					setPredefinedLines(int n);
-		void					addLine(ILine *line);
+		void							setTotalLines(int n);
+		void							setGoodLines(int n);
+		void							setBadLines(int n);
+		void							setPredefinedLines(int n);
+		void							addLine(ILine *line);
 
-		virtual AFile			*duplicate() const = 0; //Duplicate this file
-		void					addLines(const T &container);
+		virtual AFile					*duplicate() const = 0; //Duplicate this file
+		void							addLines(const T &container);
 };
 
 #include "../tpp/AFile.tpp"
