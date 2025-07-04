@@ -6,14 +6,16 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 12:00:20 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 12:57:26 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/Abstracts/AFile.hpp"
 
 template <typename T>
-AFile<T>::AFile(const std::string name, const std::string extension) : name(name), extension(extension){
+AFile<T>::AFile(const std::string name, const std::string extension)
+: 	name(name),
+	extension(extension){
 	
 }
 template <typename T>

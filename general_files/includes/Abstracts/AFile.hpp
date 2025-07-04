@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/02 14:22:29 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 13:09:30 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ class AFile{
 
 		virtual AFile					*clone() const = 0; //Duplicate this file
 		void							addLines(const T &container);
+		void							generateLines(int good, int bad, )
 };
 
 #include "../tpp/AFile.tpp"
