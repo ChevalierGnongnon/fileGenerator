@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 14:22:21 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 14:59:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,47 +51,47 @@ AFile<T> &AFile<T>::operator=(const AFile<T> &src){
 
 template <typename T>
 const std::map <int, ILine *>	&AFile<T>::getContent() const{
-	
+	return (this->content);
 }
 template <typename T>
 const std::string				&AFile<T>::getName() const{
-	
+	return (this->name);
 }
 template <typename T>
 const std::string				&AFile<T>::getExtension() const{
-	
+	return (this->extension);
 }
 template <typename T>
 int								AFile<T>::getTotalLines() const{
-	
+	return (this->totalLines);
 }
 template <typename T>
 int								AFile<T>::getGoodLines() const{
-	
+	return (this->goodLines);
 }
 template <typename T>
 int								AFile<T>::getBadLines() const{
-	
+	return (this->badLines);
 }
 template <typename T>
 int								AFile<T>::getPredefinedLines() const{
-	
+	return (this->predefinedLines);	
 }
 template <typename T>
 void							AFile<T>::setTotalLines(int n){
-	
+	this->totalLines = n;
 }
 template <typename T>
 void							AFile<T>::setGoodLines(int n){
-	
+	this->goodlines = n;
 }
 template <typename T>
 void							AFile<T>::setBadLines(int n){
-	
+	this->badLines = n;
 }
 template <typename T>
 void							AFile<T>::setPredefinedLines(int n){
-	
+	this->predefinedLines = n;	
 }
 template <typename T>
 void							AFile<T>::addLines(const T &container){
