@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 13:32:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 14:22:21 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,21 @@ AFile<T>::AFile(const std::string name, const std::string extension, int nbLines
 	
 }
 template <typename T>
-AFile<T>::AFile(const std::string name, const std::string extension, int good, int bad, int predefined){
-
-	
+AFile<T>::AFile(const std::string name, const std::string extension, int good, int bad, int predefined)
+	: name(name),
+	extension(extension),
+	goodLines(good),
+	badLines(bad),
+	predefinedLines(predefined){
+		
 }
 template <typename T>
-AFile<T>::AFile(const AFile &src){
+AFile<T>::AFile(const AFile &src)
+	: name(src.getName()),
+	extension(src.getExtension),
+	goodLines(src.getGoodLines()),
+	badLines(src.getBadLines()),
+	predefinedLines(src.getPredifinedLines()){
 	
 }
 template <typename T>
