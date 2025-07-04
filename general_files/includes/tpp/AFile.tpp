@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 15:39:47 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 17:21:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ AFile<T>::AFile(const AFile &src)
 }
 template <typename T>
 AFile<T>::~AFile(){
-	
-}
-template <typename T>
-AFile<T> &AFile<T>::operator=(const AFile<T> &src){
-	
+	typename std::map <int , ILine *>::iterator i = this->content.begin();
+	while (i != this->content.end()){
+		delete i->second;
+		i = content.erase(i);
+	}
 }
 
 template <typename T>
@@ -98,7 +98,4 @@ template <typename T>
 void							AFile<T>::setPredefinedLines(int n){
 	this->predefinedLines = n;	
 }
-template <typename T>
-void							AFile<T>::addLines(const T &container){
-	
-}
+

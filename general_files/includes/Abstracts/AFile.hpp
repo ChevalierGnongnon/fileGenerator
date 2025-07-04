@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 15:07:11 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 17:21:40 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,14 @@ class AFile{
 		int								goodLines;
 		int								badLines;
 		int								predefinedLines;
-			AFile();
+		AFile();
+		AFile &operator=(const AFile &src);
 	public :
 		AFile(const std::string name, const std::string extension);
 		AFile(const std::string name, const std::string extension, int nbLines);
 		AFile(const std::string name, const std::string extension, int good, int bad, int predefined);
 		AFile(const AFile &src);
 		virtual ~AFile();
-		
-		AFile &operator=(const AFile &src);
 		
 		const std::map <int, ILine *>	&getContent() const;
 		const std::string				&getName() const;
@@ -48,9 +47,9 @@ class AFile{
 		void							addLine(ILine *line);
 
 		virtual AFile					*clone() const = 0; //Duplicate this file
-		void							addLines(const T &container);
-		void							generateLines()
-		void							generateFile();
+		virtual void					addLines(const T &container) = 0;
+		virtual void					generateLines() = 0;
+		virtual void					generateFile() = 0;
 };
 
 #include "../tpp/AFile.tpp"
