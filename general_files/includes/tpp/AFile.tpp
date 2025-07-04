@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 14:59:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 15:39:47 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 template <typename T>
 AFile<T>::AFile(const std::string name, const std::string extension)
-: 	name(name),
+	: name(name),
 	extension(extension){
 	
 }
 template <typename T>
-AFile<T>::AFile(const std::string name, const std::string extension, int nbLines){
+AFile<T>::AFile(const std::string name, const std::string extension, int nbLines)
+	: name(name),
+	extension(extension),
+	totalLines(nbLines){
 	
 }
 template <typename T>
@@ -28,16 +31,18 @@ AFile<T>::AFile(const std::string name, const std::string extension, int good, i
 	extension(extension),
 	goodLines(good),
 	badLines(bad),
-	predefinedLines(predefined){
+	predefinedLines(predefined),
+	totalLines(good + bad + predefined){
 		
 }
 template <typename T>
 AFile<T>::AFile(const AFile &src)
 	: name(src.getName()),
-	extension(src.getExtension),
+	extension(src.getExtension()),
 	goodLines(src.getGoodLines()),
 	badLines(src.getBadLines()),
-	predefinedLines(src.getPredifinedLines()){
+	predefinedLines(src.getPredifinedLines()),
+	totalLines(src.getTotalLines()){
 	
 }
 template <typename T>
