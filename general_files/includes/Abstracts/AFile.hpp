@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 13:09:30 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 13:25:45 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class AFile{
 	public :
 		AFile(const std::string name, const std::string extension);
 		AFile(const std::string name, const std::string extension, int nbLines);
+		AFile(const std::string name, const std::string extension, int good, int bad, int predefined);
 		AFile(const AFile &src);
 		virtual ~AFile();
 		
@@ -48,7 +49,7 @@ class AFile{
 
 		virtual AFile					*clone() const = 0; //Duplicate this file
 		void							addLines(const T &container);
-		void							generateLines(int good, int bad, )
+		void							generateLines()
 };
 
 #include "../tpp/AFile.tpp"
