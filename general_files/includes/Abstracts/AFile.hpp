@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 17:21:40 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/04 18:23:52 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class AFile{
 		void							setPredefinedLines(int n);
 		void							addLine(ILine *line);
 
-		virtual AFile					*clone() const = 0; //Duplicate this file
+		virtual AFile					*clone() const = 0;
 		virtual void					addLines(const T &container) = 0;
 		virtual void					generateLines() = 0;
 		virtual void					generateFile() = 0;
