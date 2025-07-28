@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 18:23:52 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/28 12:43:12 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class AFile{
 		int								goodLines;
 		int								badLines;
 		int								predefinedLines;
+		IWriter							*writer;
 		AFile();
 		AFile &operator=(const AFile &src);
 	public :
@@ -44,12 +45,11 @@ class AFile{
 		void							setGoodLines(int n);
 		void							setBadLines(int n);
 		void							setPredefinedLines(int n);
-		void							addLine(ILine *line);
-
-		virtual AFile					*clone() const = 0;
+		
+		virtual void					addLine(ILine *line) = 0;
 		virtual void					addLines(const T &container) = 0;
-		virtual void					generateLines() = 0;
-		virtual void					generateFile() = 0;
+		
+		virtual AFile<T>				*clone() const = 0;
 };
 
 #include "../tpp/AFile.tpp"

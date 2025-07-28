@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 14:24:37 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/04 17:21:59 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/28 11:28:04 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ AFile<T>::AFile(const AFile &src)
 	extension(src.getExtension()),
 	goodLines(src.getGoodLines()),
 	badLines(src.getBadLines()),
-	predefinedLines(src.getPredifinedLines()),
+	predefinedLines(src.getPredefinedLines()),
 	totalLines(src.getTotalLines()){
 	
 }
@@ -88,7 +88,7 @@ void							AFile<T>::setTotalLines(int n){
 }
 template <typename T>
 void							AFile<T>::setGoodLines(int n){
-	this->goodlines = n;
+	this->goodLines = n;
 }
 template <typename T>
 void							AFile<T>::setBadLines(int n){
@@ -98,4 +98,3 @@ template <typename T>
 void							AFile<T>::setPredefinedLines(int n){
 	this->predefinedLines = n;	
 }
-

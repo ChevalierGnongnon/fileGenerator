@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ILine.hpp                                          :+:      :+:    :+:   */
+/*   IWriter.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/19 13:03:35 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/28 12:34:35 by chhoflac         ###   ########.fr       */
+/*   Created: 2025/07/28 11:39:06 by chhoflac          #+#    #+#             */
+/*   Updated: 2025/07/28 11:39:45 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class ILine{
-	public:
-		virtual ~ILine();
-		
-		virtual void	printOnFile() const = 0;
-		virtual ILine	*duplicate() const = 0;	
+#pragma once
+#include <filegen.hpp>
+
+class IWriter{
+	
 };

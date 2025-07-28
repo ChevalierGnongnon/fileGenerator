@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/02 10:35:56 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/28 11:40:54 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@
 #include <iomanip>
 #include <map>
 #include "general_files/includes/Commons/Date.hpp"
+
 #include "general_files/includes/Abstracts/AFile.hpp"
+
 #include "general_files/includes/Commons/InterfaceUser.hpp"
 #include "general_files/includes/Commons/Program.hpp"
+
 #include "general_files/includes/Interfaces/ILine.hpp"
+#include "general_files/includes/Interfaces/IWriter.hpp"
+
 #include "general_files/sources/utils/loading.cpp"
 #include "general_files/sources/utils/rng.cpp"
 
