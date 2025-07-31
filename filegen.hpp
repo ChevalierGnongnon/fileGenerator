@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/31 11:32:55 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/31 12:28:41 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 
 #include "general_files/includes/Interfaces/ILine.hpp"
 #include "general_files/includes/Interfaces/IWriter.hpp"
+#include "general_files/includes/Interfaces/IFileGenerator.hpp"
+#include "general_files/includes/Interfaces/ILineGenerator.hpp"
 
 #include "general_files/sources/utils/loading.cpp"
 #include "general_files/sources/utils/rng.cpp"
