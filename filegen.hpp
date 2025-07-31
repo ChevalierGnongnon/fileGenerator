@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/28 11:40:54 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:32:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <iomanip>
 #include <map>
+#include <vector>
 #include "general_files/includes/Commons/Date.hpp"
 
 #include "general_files/includes/Abstracts/AFile.hpp"
