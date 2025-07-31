@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 10:21:36 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/31 11:41:14 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/31 12:04:33 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class txtLine : public ILine{
 		txtLine();
 		txtLine(const size_t len);
 		txtLine(const size_t len, const size_t nbWords);
-		txtLine(const size_t len, const size_t nbWords, const std::string *predefinedWords);
+		txtLine(const size_t len, const size_t nbWords, const std::vector<std::string> predefinedWords);
 		txtLine(const size_t nbWords);
-		~txtLine();
+		virtual ~txtLine();
 		
 		const std::string				&getContent() const;
 		const size_t					getLen() const;
