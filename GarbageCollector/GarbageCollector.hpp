@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 12:10:42 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/07/31 12:42:58 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/07/31 13:50:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,21 @@ class GarbageCollector{
 		std::vector <ILine *>			&getLines();
 		std::vector <IWriter *>			&getIWriters();
 		std::vector <IFileGenerator *>	&getIFileGenerators();
-		std::vector <ILineGenerator *> 	&LineGenerators();
+		std::vector <ILineGenerator *> 	&getLineGenerators();
 
-		
+		void							registerAFile(AFile<T> *file);
+		void							registerDate(Date *date);
+		void							registerLine(ILine *line);
+		void							registerWriter(IWriter *writer);
+		void							registerFileGenerator(IFileGenerator *fileGenerator);
+		void							registerLineGenerator(ILineGenerator *lineGenerator);
+
+		void							clearAFiles();
+		void							clearDates();
+		void							clearLines();
+		void							clearWriters();
+		void							clearFileGenerator();
+		void							clearLineGenerator();
+
+		void							clearAll();
 };
