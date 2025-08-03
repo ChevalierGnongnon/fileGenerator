@@ -6,14 +6,20 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 12:32:05 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/03 12:50:55 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/03 15:19:45 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <filegen.hpp>
 
 template <typename T>
-std::vector <AFile <T>*>		&GarbageCollector<T>::getAFiles(){
+GarbageCollector<T>::GarbageCollector(){}
+
+template <typename T>
+GarbageCollector<T>::~GarbageCollector(){}
+
+template <typename T>
+std::vector <IFile *>		&GarbageCollector<T>::getAFiles(){
     
 }
 

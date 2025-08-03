@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 10:31:02 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/02 11:28:48 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/03 14:40:47 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <filegen.hpp>
 
 template <typename T>
-class AFile{
+class AFile : public IFile {
 	private :
 		std::map <int, ILine *>			content;
 		const std::string				name;
