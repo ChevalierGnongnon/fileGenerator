@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:07:15 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/01 15:28:07 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/03 12:44:01 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 #include "general_files/sources/utils/loading.cpp"
 #include "general_files/sources/utils/rng.cpp"
 
+#include "GarbageCollector/GarbageCollector.hpp"
 
 //RNG
 int randomDayGenerator(bool isValid, int month, int year);

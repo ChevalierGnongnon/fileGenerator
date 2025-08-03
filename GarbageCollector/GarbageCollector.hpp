@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 12:10:42 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/01 15:36:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/03 12:38:49 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,5 @@ class GarbageCollector{
 
 		void							clearAll();
 };
+
+#include "GarbageCollector.tpp"
