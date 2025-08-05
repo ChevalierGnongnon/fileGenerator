@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 12:32:05 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/05 16:04:31 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:08:54 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,29 @@ GarbageCollector::GarbageCollector() {}
 
 GarbageCollector::~GarbageCollector() {}
 
-std::vector<IFile *> &GarbageCollector::getIFiles() {}
+std::vector<IFile *> &GarbageCollector::getIFiles() {
+	return (this->IFiles);
+}
 
-std::vector<Date *> &GarbageCollector::getDates() {}
+std::vector<Date *> &GarbageCollector::getDates() {
+	return (this->Dates);
+}
 
-std::vector<ILine *> &GarbageCollector::getLines() {}
+std::vector<ILine *> &GarbageCollector::getLines() {
+	return (this->Lines);
+}
 
-std::vector<IWriter *> &GarbageCollector::getIWriters() {}
+std::vector<IWriter *> &GarbageCollector::getIWriters() {
+	return (this->Writers);
+}
 
-std::vector<IFileGenerator *> &GarbageCollector::getIFileGenerators() {}
+std::vector<IFileGenerator *> &GarbageCollector::getIFileGenerators() {
+	return (this->FileGenerators);
+}
 
-std::vector<ILineGenerator *> &GarbageCollector::getLineGenerators() {}
+std::vector<ILineGenerator *> &GarbageCollector::getLineGenerators() {
+	return (this->LineGenerators);
+}
 
 int GarbageCollector::registerIFile(IFile *file) {
 	if(file){
