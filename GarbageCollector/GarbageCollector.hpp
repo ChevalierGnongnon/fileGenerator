@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 12:10:42 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/05 16:01:06 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/07 11:01:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 class GarbageCollector{
 	private :
-		std::vector<IFile *> 		IFiles;
+		std::vector<IFile *> 			IFiles;
 		std::vector<Date *>				Dates;
 		std::vector<ILine *> 			Lines;
 		std::vector<IWriter *>			Writers;
@@ -34,19 +34,19 @@ class GarbageCollector{
 		std::vector <IFileGenerator *>	&getIFileGenerators();
 		std::vector <ILineGenerator *> 	&getLineGenerators();
 
-		int							registerIFile(IFile *file);
-		int							registerDate(Date *date);
-		int							registerLine(ILine *line);
-		int							registerWriter(IWriter *writer);
-		int							registerFileGenerator(IFileGenerator *fileGenerator);
-		int							registerLineGenerator(ILineGenerator *lineGenerator);
+	int									registerIFile(IFile *file);
+	int									registerDate(Date *date);
+	int									registerLine(ILine *line);
+	int									registerWriter(IWriter *writer);
+	int									registerFileGenerator(IFileGenerator *fileGenerator);
+	int									registerLineGenerator(ILineGenerator *lineGenerator);
 
-		int							clearAFiles();
-		int							clearDates();
-		int							clearLines();
-		int							clearWriters();
-		int							clearFileGenerator();
-		int							clearLineGenerator();
+	int									clearFiles();
+	int									clearDates();
+	int									clearLines();
+	int									clearWriters();
+	int									clearFileGenerator();
+	int									clearLineGenerator();
 
-		int							clearAll();
+	int									clearAll();
 };

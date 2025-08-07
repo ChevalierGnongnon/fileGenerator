@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 12:32:05 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/08/05 16:08:54 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/08/07 11:03:16 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,16 +94,65 @@ int GarbageCollector::registerLineGenerator(ILineGenerator *lineGenerator) {
 	return (-1);
 }
 
-int GarbageCollector::clearAFiles() {}
+int GarbageCollector::clearFiles() {
+	std::vector<IFile *>::iterator i = this->IFiles.begin();
+	while (i != this->IFiles.end()){
+		delete *i;
+		i++;
+	}
+	this->IFiles.clear();
+}
 
-int GarbageCollector::clearDates() {}
+int GarbageCollector::clearDates() {
+	std::vector<Date *>::iterator i = this->Dates.begin();
+	while (i != this->Dates.end()){
+		delete *i;
+		i++;
+	}
+	this->Dates.clear();
+}
 
-int GarbageCollector::clearLines() {}
+int GarbageCollector::clearLines() {
+	std::vector<ILine *>::iterator i = this->Lines.begin();
+	while (i != this->Lines.end()){
+		delete *i;
+		i++;
+	}
+	this->Lines.clear();
+}
 
-int GarbageCollector::clearWriters() {}
+int GarbageCollector::clearWriters() {
+	std::vector<IWriter *>::iterator i = this->Writers.begin();
+	while (i != this->Writers.end()){
+		delete *i;
+		i++;
+	}
+	this->Writers.clear();
+}
 
-int GarbageCollector::clearFileGenerator() {}
+int GarbageCollector::clearFileGenerator() {
+	std::vector<IFileGenerator *>::iterator i = this->FileGenerators.begin();
+	while (i != this->FileGenerators.end()){
+		delete *i;
+		i++;
+	}
+	this->FileGenerators.clear();
+}
 
-int GarbageCollector::clearLineGenerator() {}
+int GarbageCollector::clearLineGenerator() {
+	std::vector<ILineGenerator *>::iterator i = this->LineGenerators.begin();
+	while (i != this->LineGenerators.end()){
+		delete *i;
+		i++;
+	}
+	this->LineGenerators.clear();
+}
 
-int GarbageCollector::clearAll() {}
+int GarbageCollector::clearAll() {
+	this->clearFiles();
+	this->clearDates();
+	this->clearLines();
+	this->clearWriters();
+	this->clearFileGenerator();
+	this->clearLineGenerator();
+}
